@@ -1,0 +1,163 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;               /* align logo + text in a row */
+  align-items: center;         /* vertically center everything */
+  gap: 20px;                   /* space between logo and text */
+  text-align: left;
+  background-color: #004080;
+  padding: 20px;
+  color: white;
+}
+
+header .header-text {
+  display: flex;
+  flex-direction: column;      /* stack h1 and h2 vertically */
+  justify-content: center;
+}
+
+header .header-text h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header .header-text h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #cce0ff;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #0066cc;
+  padding: 10px;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background-color: #003366;
+}
+
+/* ===== Main Sections ===== */
+main {
+  padding: 20px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ===== Forms ===== */
+form input, form select, form button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #e6f0ff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #004080;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* ===== Dashboard Boxes ===== */
+.dashboard-box {
+  background-color: #e6f0ff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* ===== Additional Layout ===== */
+.main-header {
+  display: flex;
+  align-items: left;
+  background-color: #002b5c;
+  color: white;
+  padding: 15px 25px;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 20px;
+}
+
+header .logo {
+  height: 70px;
+  width: auto;
+}
+/* ===== Dashboard Grid ===== */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* ===== Severity Colors in Risk Register ===== */
+li {
+  background-color: #e6f0ff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Highlight due date in Compliance Tasks */
+.section.compliance li span {
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header, nav, main {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav button {
+      margin: 5px 0;
+  }
+}
